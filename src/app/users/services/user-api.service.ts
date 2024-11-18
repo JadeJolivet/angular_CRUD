@@ -17,7 +17,11 @@ export class UserApiService {
   }
 
   postUser$(user: User): void {
-    this._http.post(this._BASE_API_URL + "users", user).subscribe();
+    this._http.post<User>(this._BASE_API_URL + "users", user).subscribe();
+  }
+
+  update$(user: User): void {
+    this._http.put<User>(this._BASE_API_URL + "users/" + user.id, user).subscribe();
   }
 
 }

@@ -1,13 +1,15 @@
+import { ClonePipe } from './../../../core/clone.pipe';
 import { Component, inject } from '@angular/core';
 import { UserApiService } from '../../services/user-api.service';
 import { User } from '../../models/user.model';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { UpdateUserComponent } from '../update-user/update-user.component';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, ClonePipe, UpdateUserComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css'
 })
