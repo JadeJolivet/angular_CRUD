@@ -1,0 +1,11 @@
+<h1>Users List 📋</h1>
+
+<section>
+   @for(user of users$ | async; track user.id) {
+   <div>
+    <p> ID {{ user.id }}</p>
+    <p> Username : {{ user.username}}</p>
+    <p> Email : {{ user.email}}</p>
+   </div>
+}
+</section>
