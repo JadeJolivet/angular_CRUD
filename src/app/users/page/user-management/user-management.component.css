@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    gap: 8rem;
+}
+app-user-list {
+    flex: 0 0 70%;
+}
+app-create-user {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1em;
+}

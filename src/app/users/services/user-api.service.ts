@@ -16,4 +16,8 @@ export class UserApiService {
     return this._http.get<User[]>(this._BASE_API_URL + "users");
   }
 
+  postUser$(user: User): void {
+    this._http.post(this._BASE_API_URL + "users", user).subscribe();
+  }
+
 }
