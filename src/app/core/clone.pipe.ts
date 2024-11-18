@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { User } from '../users/models/user.model';
 
 @Pipe({
   name: 'clone',
@@ -6,8 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ClonePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: User): User {
+    return { ...value }; 
   }
 
 }
