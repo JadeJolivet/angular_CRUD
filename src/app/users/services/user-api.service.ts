@@ -24,4 +24,8 @@ export class UserApiService {
     this._http.put<User>(this._BASE_API_URL + "users/" + user.id, user).subscribe();
   }
 
+  delete$(userId : string): void {
+    this._http.delete<void>(this._BASE_API_URL + "users/" + userId).subscribe();
+  }
+
 }
